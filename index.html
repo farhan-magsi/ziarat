@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زیارت، ایران | مقدس ترین زیارت گاہیں</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #ad1e1e;
+            --secondary: #d4af37;
+            --accent: #1a5d1a;
+            --light: #f8f5f0;
+            --dark: #2c2926;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f8f5f0 0%, #e6e2d9 100%);
+            color: var(--dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            direction: rtl;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .urdu-text {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 1.2rem;
+            line-height: 2;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: rgba(139, 0, 0, 0.95);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .logo i {
+            color: var(--secondary);
+            margin-left: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-right: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            right: 0;
+            background-color: var(--secondary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1601475300130-1c0e8a8e3b8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 70px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--dark);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid var(--secondary);
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: -15px;
+            right: 50%;
+            transform: translateX(50%);
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Attractions Section */
+        .attractions {
+            background: linear-gradient(135deg, #f0f5e9 0%, #e1e8d5 100%);
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .attraction-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .attraction-card:hover .card-image img {
+            transform: scale(1.1);
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 250px;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay i {
+            color: white;
+            font-size: 2.5rem;
+        }
+
+        /* Travel Tips */
+        .travel-tips {
+            background: linear-gradient(135deg, #e9f0f5 0%, #d5e1e8 100%);
+        }
+
+        .tips-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .tip-box {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .tip-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .tip-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .tip-box h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            gap: 40px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .contact-details {
+            margin-bottom: 30px;
+        }
+
+        .contact-details p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-details i {
+            margin-left: 10px;
+            color: var(--primary);
+            width: 20px;
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .footer-column h3 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #bbb;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+            padding-right: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(84, 114, 168, 0.1);
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #999;
+            font-size: 0.9rem;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        /* Quran Verse */
+        .quran-verse {
+            background: linear-gradient(rgba(139, 0, 0, 0.8), rgba(139, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1592571263253-21d1a5b9d6d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .quran-verse .container {
+            max-width: 800px;
+        }
+
+        .quran-verse h2 {
+            color: var(--secondary);
+            margin-bottom: 30px;
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .verse-text {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            line-height: 2.5;
+        }
+
+        .verse-reference {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        /* Religious Etiquette */
+        .etiquette {
+            background-color: #f8f5f0;
+            padding: 50px 0;
+            border-radius: 10px;
+            margin: 50px 0;
+        }
+
+        .etiquette h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary);
+            font-family: 'Noto Nastaliq Urdu', serif;
+        }
+
+        .etiquette-list {
+            list-style: none;
+            padding: 0 20px;
+        }
+
+        .etiquette-list li {
+            margin-bottom: 15px;
+            padding-right: 20px;
+            position: relative;
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 1.1rem;
+        }
+
+        .etiquette-list li:before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            right: -20px;
+            top: -5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .verse-text {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-mosque"></i>
+                زیارت، ایران
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">ہوم</a></li>
+                <li><a href="#about">تعارف</a></li>
+                <li><a href="#attractions">زیارت گاہیں</a></li>
+                <li><a href="#gallery">گیلری</a></li>
+                <li><a href="#tips">رہنما اصول</a></li>
+                <li><a href="#contact">رابطہ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>ایران کی مقدس زیارت گاہیں</h1>
+            <p>امام حسینؑ، مولا عباسؑ اور مولا رضاؑ کے آستانے</p>
+            <a href="#attractions" class="btn">زیارت کریں</a>
+        </div>
+    </section>
+
+    <!-- Quran Verse Section -->
+    <div class="quran-verse">
+        <div class="container">
+            <h2>قرآن پاک کی آیت</h2>
+            <div class="verse-text">
+                إِنَّمَا يُرِيدُ اللَّهُ لِيُذْهِبَ عَنكُمُ الرِّجْسَ أَهْلَ الْبَيْتِ وَيُطَهِّرَكُمْ تَطْهِيرًا
+            </div>
+            <div class="verse-reference">
+                سورہ الاحزاب، آیت 33
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>زیارت کا تعارف</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text urdu-text">
+                    <h2>ایران کی روحانی پناہ گاہ</h2>
+                    <p>زیارت، ایران ایک مقدس شہر ہے جو اپنے روحانی مراکز اور تاریخی اہمیت کے لیے مشہور ہے۔ یہ شہر اپنے پرسکون ماحول، خوبصورت مناظر اور مقدس مقامات کی وجہ سے زائرین کی توجہ کا مرکز بنا ہوا ہے۔</p>
+                    <p>زیارت میں واقع امام حسینؑ کا روضہ اقدس، مولا عباسؑ کا مزار اور مولا رضاؑ کا آستانہ اہل ایمان کے لیے خاص اہمیت رکھتے ہیں۔ یہاں ہر سال لاکھوں زائرین روحانی تسکین اور برکات حاصل کرنے آتے ہیں۔</p>
+                    <p>شہر کی تاریخ صدیوں پرانی ہے جہاں روحانیت اور ثقافت کا حسین امتزاج دیکھنے کو ملتا ہے۔ زیارت نہ صرف ایک مذہبی مرکز ہے بلکہ یہ ایران کی ثقافتی ورثے کا اہم حصہ بھی ہے۔</p>
+                    <a href="#" class="btn">مزید جانیں</a>
+                </div>
+                <div class="about-image">
+                    <img src="ziarat ke m.jpeg" alt="زیارت کا منظر">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Religious Etiquette -->
+    <div class="container">
+        <div class="etiquette">
+            <h3>زیارت کے آداب</h3>
+            <ul class="etiquette-list urdu-text">
+                <li>زیارت کے دوران پاک صاف اور مناسب لباس پہنیں</li>
+                <li>مقدس مقامات پر خاموشی اور ادب کا مظاہرہ کریں</li>
+                <li>تصاویر لینے سے پہلے اجازت لیں، خصوصاً اندرونی حصوں میں</li>
+                <li>زائرین کے لیے مخصوص جگہوں پر جوتے اتار دیں</li>
+                <li>مقدس مقامات کی حرمت کا ہمیشہ خیال رکھیں</li>
+                <li>دعا اور عبادت کے لیے پرسکون جگہوں کا احترام کریں</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Attractions Section -->
+    <section id="attractions" class="attractions">
+        <div class="container">
+            <div class="section-title">
+                <h2>اہم زیارت گاہیں</h2>
+            </div>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <div class="card-image">
+                        <img src="harm imam hussain.jpeg" alt="امام حسین کا روضہ">
+                    </div>
+                    <div class="card-content">
+                        <h3>حرم امام حسین علیہ السلام</h3>
+                        <p class="urdu-text">امام حسینؑ کا روضہ اقدس زیارت شہر کا مرکزی روحانی مقام ہے۔ یہاں ہر سال لاکھوں زائرین امامؑ کے مزار پر حاضری دینے آتے ہیں۔ روضہ مبارک کی تعمیر اسلامی فن تعمیر کا شاہکار ہے جس میں خوبصورت گنبد، مینار اور اندرونی سجاوٹ دیکھنے سے تعلق رکھتی ہے۔</p>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <div class="card-image">
+                        <img src="download (2).jpeg" alt="مولا عباس کا مزار">
+                    </div>
+                    <div class="card-content">
+                        <h3>مزار مولا عباس علیہ السلام</h3>
+                        <p class="urdu-text">مولا عباسؑ کا مزار امام حسینؑ کے روضہ کے قریب واقع ہے۔ حضرت عباسؑ کو علمدار کربلا کے نام سے جانا جاتا ہے۔ ان کا مزار بھی زائرین کے لیے خاص اہمیت رکھتا ہے۔ مزار کی تعمیر میں نیلی ٹائلز اور خوبصورت خطاطی اسلامی فن کا عمدہ نمونہ پیش کرتی ہے۔</p>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <div class="card-image">
+                        <img src="download (1).jpeg" alt="مولا رضا کا آستانہ">
+                    </div>
+                    <div class="card-content">
+                        <h3>آستانہ مولا رضا علیہ السلام</h3>
+                        <p class="urdu-text">مولا رضاؑ کا آستانہ زیارت شہر کا ایک اور اہم روحانی مرکز ہے۔ یہ مقام اپنی روحانی فضا اور تاریخی اہمیت کے لیے مشہور ہے۔ آستانے کا وسیع صحن، خوبصورت گنبد اور مینار زائرین کو اپنی طرف متوجہ کرتے ہیں۔ یہاں کی روحانی فضا دلوں کو سکون پہنچاتی ہے۔</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>تصاویر کی گیلری</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="harm imam hussain.jpeg" alt="حرم امام حسین">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="download (2).jpeg" alt="مولا عباس کا مزار">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="download (1).jpeg" alt="مولا رضا کا آستانہ">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="download (3).jpeg" alt="زائرین">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="download (3).jpeg" alt="روضے کا اندرونی منظر">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="download.jpeg" alt="روحانی تقریب">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section id="tips" class="travel-tips">
+        <div class="container">
+            <div class="section-title">
+                <h2>سفر کے رہنما اصول</h2>
+            </div>
+            <div class="tips-container">
+                <div class="tip-box">
+                    <div class="tip-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>زیارت کا بہترین وقت</h3>
+                    <p class="urdu-text">زیارت کے لیے بہترین وقت موسم بہار (مارس سے مئی) اور موسم خزاں (ستمبر سے نومبر) ہے جب موسم خوشگوار ہوتا ہے۔ رمضان المبارک اور محرم الحرام کے مہینوں میں خصوصی روحانی پروگرام ہوتے ہیں۔</p>
+                </div>
+                <div class="tip-box">
+                    <div class="tip-icon">
+                        <i class="fas fa-hiking"></i>
+                    </div>
+                    <h3>سرگرمیاں</h3>
+                    <p class="urdu-text">مقدس مقامات پر حاضری، دعا و مناجات، روحانی محافل میں شرکت، اسلامی تاریخ سے متعلق مقامات کی سیر، اور مقامی ثقافت کا مشاہدہ۔ شہر میں پرسکون پارکس اور باغات بھی آرام کے لیے موجود ہیں۔</p>
+                </div>
+                <div class="tip-box">
+                    <div class="tip-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>مقامی کھانے</h3>
+                    <p class="urdu-text">مقامی ایرانی کھانوں میں چلو کباب، غورمه سبزي، فسنجان، اور مختلف قسم کی روٹیاں شامل ہیں۔ زعفران چائے، مقامی میوہ جات اور حلوہ بھی مشہور ہیں۔ زیارت میں حلال کھانوں کی وسیع دستیابی ہے۔</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>اپنی زیارت منصوبہ بنائیں</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>ہم سے رابطہ کریں</h3>
+                    <div class="contact-details urdu-text">
+                        <p><i class="fas fa-map-marker-alt"></i> زیارت شہر، ایران</p>
+                        <p><i class="fas fa-phone"></i> +92 3083257551</p>
+                        <p><i class="fas fa-envelope"></i> info@ziaratiran.com</p>
+                        <p><i class="fas fa-clock"></i> زیارت کے اوقات: صبح 6 بجے سے رات 10 بجے تک</p>
+                    </div>
+                    <div class="map">
+                        <iframe src="ziarat ke m.jpeg" width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>ہمیں پیغام بھیجیں</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">نام</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">ای میل</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">موضوع</label>
+                            <input type="text" id="subject">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">پیغام</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">پیغام بھیجیں</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>زیارت، ایران</h3>
+                    <p class="urdu-text">روحانیت اور تاریخ کا امین شہر جہاں دل کو سکون ملتا ہے۔</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>فوری لنکس</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">ہوم</a></li>
+                        <li><a href="#about">زیارت کا تعارف</a></li>
+                        <li><a href="#attractions">زیارت گاہیں</a></li>
+                        <li><a href="#gallery">تصاویر</a></li>
+                        <li><a href="#tips">سفر کے رہنما اصول</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>زیارت گاہیں</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">حرم امام حسینؑ</a></li>
+                        <li><a href="#">مزار مولا عباسؑ</a></li>
+                        <li><a href="#">آستانہ مولا رضاؑ</a></li>
+                        <li><a href="#">جامع مسجد</a></li>
+                        <li><a href="#">روحانی لائبریری</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>نیوز لیٹر</h3>
+                    <p class="urdu-text">زیارت کی تازہ خبروں اور روحانی پروگراموں کے لیے سبسکرائب کریں۔</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" placeholder="آپ کا ای میل پتا" required>
+                        </div>
+                        <button type="submit" class="btn">سبسکرائب کریں</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 زیارت، ایران۔ تمام حقوق محفوظ ہیں۔ | روحانی سیاحت کے لیے بنایا گیا</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Back to top button functionality
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Header scroll effect        const backToTopButton = document.querySelector('.back-to-top');
+
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(139, 0, 0, 0.98)';
+                header.style.padding = '5px 0';
+            } else {
+                header.style.backgroundColor = 'rgba(139, 0, 0, 0.95)';
+                header.style.padding = '15px 0';
+            }
+        });
+        
+        // Form submission
+        const contactForm = document.querySelector('.contact-form form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('آپ کا شکریہ! ہم جلد ہی آپ سے رابطہ کریں گے۔');
+            contactForm.reset();
+        });
+    </script>
+</body>
